@@ -47,6 +47,6 @@ app.get("/api/getEntry", async (req, res) => {
 })
 
 app.put("/api/updateEntry/:id", async (req, res) => {
-    try
+    
 })
 
