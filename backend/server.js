@@ -17,18 +17,15 @@ app.use((req, res, next) => {
     next();  
 });
 
-app.use("/api/entries", entryRoutes);
-// app.use("/api/pictures", userRoutes);
-
-
-
-
 // add _ if not used 
 app.get("/", (_, res) => {
     res.send("Hello World!");
 });
 
 
+// Routes
+app.use("/api/entries", entryRoutes);
+// app.use("/api/pictures", userRoutes);
 
 // Connect to the database and start the server
 connectDB().then(() => {
